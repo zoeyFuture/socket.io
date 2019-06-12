@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Socket.IO chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font: 13px Helvetica, Arial;
+        }
+        
+        form {
+            padding: 3px;
+            bottom: 0;
+        }
+        
+        form input {
+            padding: 10px;
+            width: 20%;
+            margin-right: .5%;
+        }
+        
+        form button {
+            width: 9%;
+            background: rgb(130, 224, 255);
+            border: none;
+            padding: 10px;
+        }
+        
+        .box {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .box button {
+            width: 9%;
+            background: rgb(130, 224, 255);
+            border: none;
+            padding: 10px;
+        }
+        
+        .loginBox,
+        .registerBox {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <button id="loginBtn">登录</button>
+        <button id="registerBtn">注册</button>
+    </div>
+
+    <div class="loginBox">
+        <form action="">
+            <label>用户名：</label>
+            <input id="name" autocomplete="off" />
+
+            <label>密码：</label>
+            <input id="password" autocomplete="off" />
+
+            <br />
+            <button>登录</button>
+        </form>
+    </div>
+
+    <div class="registerBox">
+        <form action="">
+            <label>用户名：</label>
+            <input id="name" autocomplete="off" />
+
+            <label>密码：</label>
+            <input id="password" autocomplete="off" />
+
+            <label>确认密码：</label>
+            <input id="confirmPswd" autocomplete="off" />
+
+            <br />
+            <button>注册</button>
+        </form>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/socket.io/2.2.0/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="./login.js"></script>
+
+</html>
